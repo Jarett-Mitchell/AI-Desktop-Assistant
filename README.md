@@ -12,3 +12,5 @@ TODO:
 GOALS:
 -Take audio for commands.
 -Control AI personality type.
+
+Use dev branch.
