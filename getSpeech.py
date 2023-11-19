@@ -30,8 +30,8 @@ except sr.RequestError as e:
 try:
     recognized_text = recognizer.recognize_google(audio).lower()
     if "search google" in recognized_text:
-        print("what for?")
-        searchRecognizer = recognizer.listen(source)
-        print(recognizer.recognize_google(searchRecognizer))
+        with sr.Microphone() as source:
+            print("what for?")
+            searchRecognizer = recognizer.listen(source)
 except:
     print("search failed...")
